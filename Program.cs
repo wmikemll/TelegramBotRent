@@ -5,8 +5,10 @@ using Telegram.Bot.Types;
 using TekegramBotRent.Models;
 using TekegramBotRent;
 using System.Linq;
+using dotenv.net;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using Update = Telegram.Bot.Types.Update;
+using System.Collections;
 
 
 namespace TelegramBotRent
@@ -15,7 +17,9 @@ namespace TelegramBotRent
     {
         static void Main(string[] args)
         {
-            var host = new Host("7151435339:AAEJBHoV0JZI5qLFV5eY5TxwOdXTmN0XBdI");
+            DotEnv.Load(options: new DotEnvOptions(envFilePaths: new[] { "C:\\Users\\Эмиль\\source\\repos\\entity\\.env" }));
+            string token = Environment.GetEnvironmentVariable("TELEGRAM_BOT_TOKEN");
+            var host = new Host(token);
             host.Start();
             host.OnMessage += Start;
             Console.ReadLine();
