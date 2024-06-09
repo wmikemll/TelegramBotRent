@@ -2,8 +2,8 @@
 using Telegram.Bot.Types.ReplyMarkups;
 using Telegram.Bot;
 using Telegram.Bot.Types;
-using TekegramBotRent.Models;
-using TekegramBotRent;
+using TelegramBotRent.Models;
+using TelegramBotRent;
 using System.Linq;
 using dotenv.net;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
