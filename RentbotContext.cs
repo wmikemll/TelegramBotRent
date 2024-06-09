@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using TekegramBotRent.Models;
+using TelegramBotRent.Models;
 
-namespace TekegramBotRent;
+namespace TelegramBotRent;
 
 public partial class RentbotContext : DbContext
 {

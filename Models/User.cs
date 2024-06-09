@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TekegramBotRent.Models;
+namespace TelegramBotRent.Models;
 
 public partial class User
 {

@@ -2,13 +2,14 @@
 using Telegram.Bot.Types.ReplyMarkups;
 using Telegram.Bot;
 using Telegram.Bot.Types;
-using TelegramBotRent.Models;
+
 using TelegramBotRent;
 using System.Linq;
 using dotenv.net;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using Update = Telegram.Bot.Types.Update;
 using System.Collections;
+using TelegramBotRent.Models;
 
 
 namespace TelegramBotRent
@@ -61,7 +62,7 @@ namespace TelegramBotRent
                             {
                                 using (RentbotContext db = new RentbotContext())
                                 {
-                                    var user = new TekegramBotRent.Models.User()
+                                    var user = new TelegramBotRent.Models.User()
                                     {
                                         Id = update.Message.Chat.Id.ToString(),
                                         Username = update.Message.Chat.Username,
